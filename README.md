@@ -1,1 +1,95 @@
-# mysql
+select * from Customer
+where customerID = 12;
+
+where income < = 100;
+where income > = 100;
+where income <> 100;
+where not (income = 0);
+
+--set inclusion
+where customerID in('2','3') -- This will return all the * columns where customer id is 2 and 3
+where customerID not in ('2', '3')
+
+--Range 
+where date between (----)
+where date not between (-----)
+
+--Pattern
+where customerID like 'k%'
+where customerID not like 'k%'
+
+--Null
+where customerID is Null
+where customerID is not Null
+
+--Booliean 
+where customerID = '2' and  customerID = '3'
+where customerID = '2' or customerID'3'
+where customerID not '2' and customerID not'3' -- I need look into detail on this 
+
+
+--order by clause
+order by employeeID
+order by f_name, l_name
+order by f_name asc
+		,l_name
+		,hire_date - what happens at this time?
+
+--class work
+select l_name as family_name, 
+	f_name
+from l_employees
+order by l_name asc;
+
+--understanding
+select department_name as dept
+from departments_table
+order by department_name asc
+
+select department_code,
+	l_name
+from l_employees
+where employeeID <> 209
+order by department_code asc,
+	l_name desc;
+
+select * from l_employees
+where employeeID in (203, 204, 205) and department_code = 'SAL'
+
+select * from l_employees
+where (employeeID = 203 or employeeID = 204 or employeeID =205) and department_code = 'SAL'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
